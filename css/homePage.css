@@ -1,0 +1,117 @@
+*{
+    font-family: 'Poppins';
+}
+/* sec -1 Introduction */
+.homepage-sec-1{
+    height:calc(80vh );
+}
+.hmpage-intro{
+    font-size: 2.6rem;
+    margin: 0px;
+    line-height:70px;
+    color:#616161;
+    width:75%;
+    text-align: justify;
+}
+.hmintro-btn{
+    background-color: #0747a6;
+    border:none;
+    border-radius:53px;
+    color:white;
+    font-size: 1rem; 
+    height:55px;
+    width:232px;
+    position: relative;
+    top:0px;
+    transition: top 0.2s;
+}
+.hmintro-btn:hover{
+    top:-3px;
+}
+.hmintro-btn:active{
+    top:0px;
+}
+.hmintro-btn:focus{ 
+    outline: none; 
+}
+
+/* sec -2 why us styles */
+
+.homepage-sec-2{
+    background-color: #f2f2f2;
+    padding:20px;
+}
+.sec-2-1-text{
+    color:#9e9e9e;
+    font-size: 1.51rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-top:20px;
+}
+.sec-2-2-text{
+    color:#4f4f4f;
+    font-size:2rem;
+    font-weight: bold;
+    margin-top:40px;
+    line-height: 1.3px;
+    letter-spacing: 1px;
+}
+.hp-sec-2-card-con{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top:15px;
+    width:90vw;
+}
+/* Media queries */
+
+@media only screen and (max-width: 1350px) {
+    .hmpage-intro{
+        font-size:2rem;
+        line-height:50px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .hmpage-intro{
+        font-size:1.8rem;
+        line-height:45px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .hmpage-intro{
+        font-size:1.5rem;
+        line-height:45px;
+    }
+    .hmintro-btn{
+        height:50px;
+        width:200px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .hmpage-intro{
+        font-size:1.3rem;
+        line-height:40px;
+    }
+    .hmintro-btn{
+        height:40px;
+        width:150px;
+        font-size: 12px; 
+    }
+}
+@media only screen and (max-width: 310px) {
+    .hmpage-intro{
+        font-size:1.1rem;
+        line-height:30px;
+    }
+}
+@media only screen and (max-width: 200px) {
+    .hmpage-intro{
+        font-size:1rem;
+        line-height:30px;
+    }
+    .hmintro-btn{
+        height:40px;
+        width:120px;
+        font-size: 10px; 
+    }
+}
