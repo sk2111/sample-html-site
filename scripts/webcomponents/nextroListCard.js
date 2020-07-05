@@ -91,7 +91,20 @@ class NextroListCard extends HTMLElement {
         .card-btn:focus{ 
             outline: none; 
         }
+        input,
+        textarea,
+        button,
+        select,
+        a {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
         /*Media queries*/
+        @media only screen and (max-width: 700px) {
+            .card-container:hover{
+                top:0px;
+                box-shadow:none;
+            }
+        }
         @media only screen and (max-width: 400px) {
             .card-container{
                 width:250px;
