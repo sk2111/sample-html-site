@@ -76,6 +76,9 @@
     background-color: white;
     padding:20px;
 }
+.sec-3-view-con{
+    height:80vh;
+}
 .dp-none{
     display: none;
 }
