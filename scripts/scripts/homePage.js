@@ -55,7 +55,7 @@ class SwitchViewHandlerSec3 extends commonHelpers{
     constructor(){
         super();
         this.currentViewIndex = 0;
-        this.titleHeaders = ['CORPORATE FILINGS','COMPANY ACT','FULL ADUITING'];
+        this.titleHeaders = ['CORPORATE FILINGS','COMPANY ACT','FULL AUDITING'];
         this.roundRef = {
             0:sec3round0,1:sec3round1,2:sec3round2,
         };
@@ -66,6 +66,9 @@ class SwitchViewHandlerSec3 extends commonHelpers{
     changeHeaderTitle(){
         sec3TitleHeader.innerHTML = '';
         sec3TitleHeader.innerHTML = this.titleHeaders[this.currentViewIndex];
+        sec3TitleHeader.classList.remove("animate__animated","animate__fadeInUp");
+        sec3TitleHeader.offsetHeight;//Forcing animation to occur since removing class and add class wont trigger layout operation
+        sec3TitleHeader.classList.add("animate__animated","animate__fadeInUp");
     }
     changeViewIndex(){
         //hide everything
