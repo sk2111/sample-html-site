@@ -15,6 +15,9 @@
 .ml-round{
     margin-left: 15px;
 }
+.blue-color-background{
+    background-color: #0747a6;
+}
 /* sec -1 Introduction */
 .homepage-sec-1{
     height:calc(80vh );
