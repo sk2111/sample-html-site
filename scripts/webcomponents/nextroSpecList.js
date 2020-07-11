@@ -24,6 +24,13 @@ class NextroSpecList extends HTMLElement {
             align-items:center;
         }
         /* Component specific style*/
+        .container{
+            height:100%;
+            width:100%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
         .spec-list-con{
             width:350px;
             height:250px;
@@ -53,13 +60,15 @@ class NextroSpecList extends HTMLElement {
           
         }
         </style>
-        <div class="spec-list-con flex-row">
+        <div class="container">
+            <div class="spec-list-con flex-row">
             <img  class="accounts-icon" src="/assets/icons/cash.svg">
             <div class="right-sec">
-                <div class="flex-row align-cen">
-                    <div id="card-title"></div>
+            <div class="flex-row align-cen">
+                        <div id="card-title"></div>
+                    </div>
+                    <div id="card-description" class="description"></div>
                 </div>
-                <div id="card-description" class="description"></div>
             </div>
         </div>
         `;

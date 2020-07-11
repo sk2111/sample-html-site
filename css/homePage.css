@@ -78,20 +78,22 @@
 }
 .sec-3-view-con{
     height:80vh;
+    width:95vw;
 }
 .dp-none{
     display: none;
 }
 .sec-3-middle-view{
     width:100%;
-    padding:10px 60px 30px 60px;
+    padding:10px 10px 10px 10px;
 }
 .sec-3-card-sty{
-    width:500px;
+    width:450px;
+    height:320px;
 }
 .sec-3-content-con{
     width:100%;
-    height:86%;
+    height:100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
