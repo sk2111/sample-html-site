@@ -57,7 +57,9 @@ class NextroSpecList extends HTMLElement {
         }
         /*Media queries*/
         @media only screen and (max-width: 700px) {
-          
+         .description{ 
+            font-size:1rem;
+         }
         }
         </style>
         <div class="container">
