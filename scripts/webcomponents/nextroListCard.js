@@ -104,6 +104,9 @@ class NextroListCard extends HTMLElement {
                 top:0px;
                 box-shadow:none;
             }
+            .title{
+                font-size:1.05rem;
+            }
         }
         @media only screen and (max-width: 400px) {
             .card-container{
@@ -120,7 +123,7 @@ class NextroListCard extends HTMLElement {
                 font-size:11px;
             }
         }
-        @media only screen and (max-width: 300px) {
+        @media only screen and (max-width: 320px) {
             .card-container{
                 width:180px;
                 height:250px;

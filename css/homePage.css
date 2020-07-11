@@ -153,6 +153,27 @@
         height:280px;
     }
 }
+@media only screen and (max-width: 570px) {
+    .sec-3-card-sty{
+        height:255px;
+    }
+    .arrow-con-rl{
+        display:none !important;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .sec-3-card-sty{
+        height:255px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .blue-underline{
+        width:264px;
+    }
+    .sec-2-2-text{
+        font-size:1.5rem;
+    }
+}
 @media only screen and (max-width: 400px) {
     .hmpage-intro{
         font-size:1.3rem;
@@ -163,12 +184,21 @@
         width:150px;
         font-size: 12px; 
     }
+    .sec-3-card-sty{
+        height:320px;
+        width:250px;
+    }
 }
 @media only screen and (max-width: 310px) {
     .hmpage-intro{
         font-size:1.1rem;
         line-height:30px;
     }
+}
+@media only screen and (max-width: 280px) {
+    .sec-3-card-sty{
+        width:218px;
+    } 
 }
 @media only screen and (max-width: 200px) {
     .hmpage-intro{

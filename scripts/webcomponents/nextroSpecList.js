@@ -61,6 +61,24 @@ class NextroSpecList extends HTMLElement {
             font-size:1rem;
          }
         }
+        @media only screen and (max-width: 450px) {
+            #card-title{
+                font-size:1.05rem;
+            }
+        }
+        @media only screen and (max-width: 400px) {
+            #card-title{
+                font-size:1.05rem;
+            }
+            .container{
+                justify-content: flex-start;
+                align-items: normal;
+            }
+            .accounts-icon{
+                height:30px;
+                width:30px;
+            }
+        }
         </style>
         <div class="container">
             <div class="spec-list-con flex-row">
