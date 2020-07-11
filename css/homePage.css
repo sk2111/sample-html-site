@@ -108,7 +108,7 @@
     padding:30px 10px 0px 10px;
 }
 .sec-3-card-sty{
-    width:550px;
+    width:520px;
     height:320px;
 }
 .sec-3-content-con{
@@ -149,6 +149,9 @@
         height:50px;
         width:200px;
     }
+    .sec-3-card-sty{
+        height:280px;
+    }
 }
 @media only screen and (max-width: 400px) {
     .hmpage-intro{
@@ -176,5 +179,21 @@
         height:40px;
         width:120px;
         font-size: 10px; 
+    }
+}
+/* Media query defined ranges */
+@media only screen and (min-width: 1600px) and (max-width: 1812px){
+    .sec-3-card-sty{
+        width:450px;
+    }
+}
+@media only screen and (min-width: 1411px) and (max-width: 1600px){
+    .sec-3-card-sty{
+        width:400px;
+    }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1234px){
+    .sec-3-card-sty{
+        width:400px;
     }
 }
