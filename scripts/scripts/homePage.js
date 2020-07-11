@@ -56,6 +56,20 @@ class SwitchViewHandlerSec3 extends commonHelpers{
     changeRoundIndex(){
         //clear all blue classes
         this.removeClass(Object.values(this.roundRef),'blue-color-background');
+        // assign blue class to selected index
+        this.addClass(this.roundRef[this.currentViewIndex],'blue-color-background');
+    }
+    moveSec3Right(){
+        if(this.currentViewIndex === 2)
+        {
+            this.currentViewIndex = 0;
+        }
+        else{
+            this.currentViewIndex += 1;
+        }
+        // change round color to new index
+        this.changeRoundIndex();
+        // change view index
     }
     moveSec3Left(){
        if(this.currentViewIndex === 0)
