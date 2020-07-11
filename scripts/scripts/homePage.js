@@ -33,12 +33,20 @@ observer.observe(document.querySelector("#sec-2-card-con"));
 // Section 3 : arrow shift logic
 class commonHelpers {
     constructor(){}
-    removeClass(arr,className){
+    removeClassArr(arr,className){
         arr.forEach(element => {
             element.classList.remove(className);
         });
     }
-    addClass(element,className){
+    addClassArr(arr,className){
+        arr.forEach(element => {
+            element.classList.add(className);
+        });
+    }
+    removeClassElem(element,className){
+        element.classList.remove(className);
+    }
+    addClassElem(element,className){
         element.classList.add(className);
     }
 }
@@ -53,11 +61,23 @@ class SwitchViewHandlerSec3 extends commonHelpers{
             0:sec3View0,1:sec3View1,2:sec3View2,
         };
     }
+    changeViewIndex(){
+        //hide everything
+        this.addClassArr(Object.values(this.viewRef),'dp-view-none');
+        // Bring view for selected index
+        this.removeClassElem(this.viewRef[this.currentViewIndex],'dp-view-none');
+    }
     changeRoundIndex(){
         //clear all blue classes
-        this.removeClass(Object.values(this.roundRef),'blue-color-background');
+        this.removeClassArr(Object.values(this.roundRef),'blue-color-background');
         // assign blue class to selected index
-        this.addClass(this.roundRef[this.currentViewIndex],'blue-color-background');
+        this.addClassElem(this.roundRef[this.currentViewIndex],'blue-color-background');
+    }
+    _handleViewLogic(){
+        // change round color to new index
+        this.changeRoundIndex();
+        // change view index
+        this.changeViewIndex();
     }
     moveSec3Right(){
         if(this.currentViewIndex === 2)
@@ -67,9 +87,7 @@ class SwitchViewHandlerSec3 extends commonHelpers{
         else{
             this.currentViewIndex += 1;
         }
-        // change round color to new index
-        this.changeRoundIndex();
-        // change view index
+        this._handleViewLogic();
     }
     moveSec3Left(){
        if(this.currentViewIndex === 0)
@@ -79,9 +97,7 @@ class SwitchViewHandlerSec3 extends commonHelpers{
        else{
         this.currentViewIndex -= 1;
        }
-       // change round color to new index
-       this.changeRoundIndex();
-       // change view index
+       this._handleViewLogic();
     }
 }
 
