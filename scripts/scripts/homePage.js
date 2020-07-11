@@ -100,9 +100,9 @@ class SwitchViewHandlerSec3 extends commonHelpers{
        this._handleViewLogic();
     }
     roundBtnClickSec3(e){
-        console.log(e);
-        // let compIndex = e.getAttribute('compIndex');
-        // console.log(compIndex);
+        let compIndex = e.getAttribute('compIndex');
+        this.currentViewIndex = Number(compIndex);
+        this._handleViewLogic();
     }
 }
 
