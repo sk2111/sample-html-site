@@ -1,5 +1,6 @@
 *{
     font-family: 'Poppins';
+    user-select: none;
 }
 .blue-underline{
     border:2px solid #0747a6;
@@ -11,12 +12,16 @@
     width:16px;
     border:1px solid #9e9e9e;
     border-radius: 50%;
+    cursor: pointer;
 }
 .ml-round{
     margin-left: 15px;
 }
 .blue-color-background{
     background-color: #0747a6;
+}
+.dp-view-none{
+    display:none !important;
 }
 /* sec -1 Introduction */
 .homepage-sec-1{

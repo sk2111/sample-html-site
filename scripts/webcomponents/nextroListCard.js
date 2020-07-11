@@ -34,11 +34,11 @@ class NextroListCard extends HTMLElement {
             margin:15px;
             position:relative;
             top:0px;
-            transition:top .1s;
+            transition:top .2s;
         }
         .card-container:hover{
-            top:-3px;
-            box-shadow:0px 0px 2px 0px #9e9e9e;
+            top:-6px;
+            box-shadow:0px 0px 1px 0px #9e9e9e;
         }
         .title{
             font-size:0.9rem;
