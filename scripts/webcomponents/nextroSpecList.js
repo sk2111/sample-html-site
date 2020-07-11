@@ -32,22 +32,34 @@ class NextroSpecList extends HTMLElement {
             font-size:0.89rem;
             line-height:22px;
             margin-top:10px;
+            text-align:justify;
         }
         #card-title{
             color:#424242;
             font-size:1.313rem;
             font-weight:bold;
+            margin-top:5px;
+        }
+        .accounts-icon{
+            height:50px;
+            width:50px;
+        }
+        .right-sec{
+            margin-left:10px;
         }
         /*Media queries*/
         @media only screen and (max-width: 700px) {
           
         }
         </style>
-        <div class="spec-list-con">
-            <div class="flex-row align-cen">
-                <div id="card-title"></div>
+        <div class="spec-list-con flex-row">
+            <img  class="accounts-icon" src="/assets/icons/cash.svg">
+            <div class="right-sec">
+                <div class="flex-row align-cen">
+                    <div id="card-title"></div>
+                </div>
+                <div id="card-description" class="description"></div>
             </div>
-            <div id="card-description" class="description"></div>
         </div>
         `;
         this.cardTitle = this.shadowRoot.querySelector("#card-title");
