@@ -3,6 +3,7 @@ const sec2Taxation = document.querySelector('#taxation-card-sec-2');
 const sec2Finance = document.querySelector('#finance-card-sec-2');
 
 // section 3 reference
+const sec3TitleHeader = document.querySelector("#sec-2-titleHeader");
 const sec3round0 = document.querySelector('#sec-3-round-0');
 const sec3round1 = document.querySelector('#sec-3-round-1');
 const sec3round2 = document.querySelector('#sec-3-round-2');
@@ -54,12 +55,17 @@ class SwitchViewHandlerSec3 extends commonHelpers{
     constructor(){
         super();
         this.currentViewIndex = 0;
+        this.titleHeaders = ['CORPORATE FILINGS','COMPANY ACT','FULL ADUITING'];
         this.roundRef = {
             0:sec3round0,1:sec3round1,2:sec3round2,
         };
         this.viewRef = {
             0:sec3View0,1:sec3View1,2:sec3View2,
         };
+    }
+    changeHeaderTitle(){
+        sec3TitleHeader.innerHTML = '';
+        sec3TitleHeader.innerHTML = this.titleHeaders[this.currentViewIndex];
     }
     changeViewIndex(){
         //hide everything
@@ -78,6 +84,8 @@ class SwitchViewHandlerSec3 extends commonHelpers{
         this.changeRoundIndex();
         // change view index
         this.changeViewIndex();
+        //change header title
+        this.changeHeaderTitle();
     }
     moveSec3Right(){
         if(this.currentViewIndex === 2)
