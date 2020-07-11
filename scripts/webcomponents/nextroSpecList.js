@@ -25,12 +25,13 @@ class NextroSpecList extends HTMLElement {
         }
         /* Component specific style*/
         .spec-list-con{
-            width:290px;
+            width:350px;
+            height:250px;
         }
         .description{
             color:#424242;
             font-size:0.89rem;
-            line-height:22px;
+            line-height:30px;
             margin-top:10px;
             text-align:justify;
         }
