@@ -158,7 +158,11 @@ class NextroListCard extends HTMLElement {
         this.cardDescription = this.shadowRoot.querySelector("#card-description");
         this.carBtn = this.shadowRoot.querySelector("#cardbtn-ref");
         this.carBtn.addEventListener('click',()=>{
-            console.log("Hello");
+            const scrollEvent = new CustomEvent('nextro-card-scroll', {
+                bubbles: true,
+                detail: {cardTitle:this.cardTitle.innerText}
+            });
+            dispatchEvent(scrollEvent);
         });
     }
     connectedCallback() {  }

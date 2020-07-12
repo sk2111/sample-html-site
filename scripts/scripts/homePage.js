@@ -1,8 +1,11 @@
 const sec2Accounts = document.querySelector('#accounts-card-sec-2');
 const sec2Taxation = document.querySelector('#taxation-card-sec-2');
 const sec2Finance = document.querySelector('#finance-card-sec-2');
-
+const ACCOUNTS_TITLE_CONSTANT = "ACCOUNTS";
+const TAXATION_TITLE_CONSTANT = "TAXATION";
+const FINANCE_TITLE_CONSTANT = "FINANCE";
 // section 3 reference
+const sec3Container = document.querySelector("#sec-3-container");
 const sec3TitleHeader = document.querySelector("#sec-3-titleHeader");
 const sec3round0 = document.querySelector('#sec-3-round-0');
 const sec3round1 = document.querySelector('#sec-3-round-1');
@@ -12,7 +15,8 @@ const sec3View1  = document.querySelector('#sec-3-view-1');
 const sec3View2  = document.querySelector('#sec-3-view-2');
 const sec3Anim   = document.querySelector('#sec3-anim-con');
 
-// section 4 reference 
+// section 4 reference
+const sec4Container = document.querySelector("#sec-4-container");
 const sec4TitleHeader = document.querySelector("#sec-4-titleHeader");
 const sec4round0 = document.querySelector('#sec-4-round-0');
 const sec4round1 = document.querySelector('#sec-4-round-1');
@@ -21,7 +25,8 @@ const sec4View0  = document.querySelector('#sec-4-view-0');
 const sec4View1  = document.querySelector('#sec-4-view-1');
 const sec4View2  = document.querySelector('#sec-4-view-2');
 const sec4Anim   = document.querySelector('#sec4-anim-con');
-// section 5 reference 
+// section 5 reference
+const sec5Container = document.querySelector("#sec-5-container");
 const sec5TitleHeader = document.querySelector("#sec-5-titleHeader");
 const sec5round0 = document.querySelector('#sec-5-round-0');
 const sec5round1 = document.querySelector('#sec-5-round-1');
@@ -223,3 +228,22 @@ const switchViewHandler5Ins = new SwitchViewHandlerSec(['Our Finance Expertise',
                                                       sec5TitleHeader);
 
 
+
+window.addEventListener('nextro-card-scroll',(e)=>{
+    let view = e.detail.cardTitle;
+    if(view.toLowerCase() === ACCOUNTS_TITLE_CONSTANT.toLowerCase()){
+        sec3Container.scrollIntoView({ 
+            behavior: 'smooth' 
+          });
+    }
+    if(view.toLowerCase() === TAXATION_TITLE_CONSTANT.toLowerCase()){
+        sec4Container.scrollIntoView({ 
+            behavior: 'smooth' 
+          });
+    }
+    if(view.toLowerCase() === FINANCE_TITLE_CONSTANT.toLowerCase()){
+        sec5Container.scrollIntoView({ 
+            behavior: 'smooth' 
+          });
+    }
+})
