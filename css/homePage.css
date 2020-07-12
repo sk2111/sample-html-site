@@ -23,6 +23,12 @@
 .dp-view-none{
     display:none !important;
 }
+.opac-0{
+    opacity: 0;
+}
+.visible-hidden{
+    visibility: hidden;
+}
 /* sec -1 Introduction */
 .homepage-sec-1{
     height:calc(80vh );

@@ -10,6 +10,7 @@ const sec3round2 = document.querySelector('#sec-3-round-2');
 const sec3View0  = document.querySelector('#sec-3-view-0');
 const sec3View1  = document.querySelector('#sec-3-view-1');
 const sec3View2  = document.querySelector('#sec-3-view-2');
+const sec3Anim   = document.querySelector('#sec3-anim-con');
 
 // section 4 reference 
 const sec4TitleHeader = document.querySelector("#sec-4-titleHeader");
@@ -19,7 +20,7 @@ const sec4round2 = document.querySelector('#sec-4-round-2');
 const sec4View0  = document.querySelector('#sec-4-view-0');
 const sec4View1  = document.querySelector('#sec-4-view-1');
 const sec4View2  = document.querySelector('#sec-4-view-2');
-
+const sec4Anim   = document.querySelector('#sec4-anim-con');
 // section 5 reference 
 const sec5TitleHeader = document.querySelector("#sec-5-titleHeader");
 const sec5round0 = document.querySelector('#sec-5-round-0');
@@ -28,6 +29,7 @@ const sec5round2 = document.querySelector('#sec-5-round-2');
 const sec5View0  = document.querySelector('#sec-5-view-0');
 const sec5View1  = document.querySelector('#sec-5-view-1');
 const sec5View2  = document.querySelector('#sec-5-view-2');
+const sec5Anim   = document.querySelector('#sec5-anim-con');
 
 // Section 2 : Animation logic
 //  Observer to find whether element isvisible in screen for section 2
@@ -48,7 +50,54 @@ const observer = new IntersectionObserver(function(entries) {
         
 }, { threshold: [1] });
 observer.observe(document.querySelector("#sec-2-card-con"));
-
+// sec 3 : Animation logic - Accounts
+let isSec3AnimationDone = false; 
+const observer3 = new IntersectionObserver(function(entries) {
+	if(entries[0].isIntersecting === true){
+        if(!isSec3AnimationDone)
+        {
+            isSec3AnimationDone = true;
+            setTimeout(()=>{
+               sec3Anim.classList.remove('visible-hidden');
+               sec3Anim.classList.add("animate__animated","animate__fadeInUp");
+            },70);
+        }
+    }
+        
+}, { threshold: [0.25] });
+observer3.observe(document.querySelector("#sec3-anim-con"));
+// sec 4 : Animation logic - TAXATION
+let isSec4AnimationDone = false; 
+const observer4 = new IntersectionObserver(function(entries) {
+	if(entries[0].isIntersecting === true){
+        if(!isSec4AnimationDone)
+        {
+            isSec4AnimationDone = true;
+            setTimeout(()=>{
+               sec4Anim.classList.remove('visible-hidden');
+               sec4Anim.classList.add("animate__animated","animate__fadeInUp");
+            },70);
+        }
+    }
+        
+}, { threshold: [0.25] });
+observer4.observe(document.querySelector("#sec4-anim-con"));
+// sec 5 : Animation logic - Finance
+let isSec5AnimationDone = false; 
+const observer5 = new IntersectionObserver(function(entries) {
+	if(entries[0].isIntersecting === true){
+        if(!isSec5AnimationDone)
+        {
+            isSec5AnimationDone = true;
+            setTimeout(()=>{
+               sec5Anim.classList.remove('visible-hidden');
+               sec5Anim.classList.add("animate__animated","animate__fadeInUp");
+            },70);
+        }
+    }
+        
+}, { threshold: [0.25] });
+observer5.observe(document.querySelector("#sec5-anim-con"));
 // Section 3 : arrow shift logic
 class commonHelpers {
     constructor(){}
