@@ -49,8 +49,8 @@ class NextroSpecList extends HTMLElement {
             margin-top:5px;
         }
         .accounts-icon{
-            height:50px;
-            width:50px;
+            height:45px;
+            width:32px;
         }
         .right-sec{
             margin-left:10px;
@@ -82,7 +82,7 @@ class NextroSpecList extends HTMLElement {
         </style>
         <div class="container">
             <div class="spec-list-con flex-row">
-            <img  class="accounts-icon" src="/assets/icons/cash.svg">
+            <img  class="accounts-icon" src="/assets/logo/nextro_logo_skyblue.svg">
             <div class="right-sec">
             <div class="flex-row align-cen">
                         <div id="card-title"></div>
