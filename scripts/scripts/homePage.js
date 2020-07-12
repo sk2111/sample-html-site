@@ -69,7 +69,7 @@ const observer3 = new IntersectionObserver(function(entries) {
         }
     }
         
-}, { threshold: [0.25] });
+}, { threshold: [0.1] });
 observer3.observe(document.querySelector("#sec3-anim-con"));
 // sec 4 : Animation logic - TAXATION
 let isSec4AnimationDone = false; 
@@ -85,7 +85,7 @@ const observer4 = new IntersectionObserver(function(entries) {
         }
     }
         
-}, { threshold: [0.25] });
+}, { threshold: [0.1] });
 observer4.observe(document.querySelector("#sec4-anim-con"));
 // sec 5 : Animation logic - Finance
 let isSec5AnimationDone = false; 
@@ -101,7 +101,7 @@ const observer5 = new IntersectionObserver(function(entries) {
         }
     }
         
-}, { threshold: [0.25] });
+}, { threshold: [0.1] });
 observer5.observe(document.querySelector("#sec5-anim-con"));
 // Section 3 : arrow shift logic
 class commonHelpers {
