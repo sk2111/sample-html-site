@@ -28,15 +28,14 @@ class NextroTestimonialCard extends HTMLElement {
             box-sizing:border-box;
             width:95vw;
             max-width:1600px;
-            height:150px;
             background-color:white;
             clip-path: polygon(5% 0%, 100% 0, 95% 100%, 0% 100%);
-            padding:25px 70px 25px 85px;
+            padding:25px 70px 0px 85px;
             margin-top:80px;
         }
         .image-wrapper{
-            height:100px;
-            width:150px;
+            min-height:100px;
+            min-width:100px;
             border-radius:50px;
             overflow:hidden;
         }
@@ -68,9 +67,8 @@ class NextroTestimonialCard extends HTMLElement {
         .rating-con{
             display:flex;
             justify-content:flex-end;
-            position:relative;
-            right:50px;
-            bottom:15px;
+            padding-right:30px;
+            height:40px;
         }
         /*Media queries*/
         @media only screen and (max-width: 700px) {
