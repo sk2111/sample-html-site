@@ -48,7 +48,7 @@ class NextroTestimonialCard extends HTMLElement {
         .card-description{
             font-size:1.1rem;
             color:#757575;
-            margin-left:10px;
+            margin-left:30px;
             line-height:28px;
             font-style:italic;
         }
