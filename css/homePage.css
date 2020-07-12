@@ -133,6 +133,15 @@
 .sec-4-full-container{
     background-color: #f2f2f2;
 }
+/* sec 6 - Testimonials */
+.homepage-sec-6{
+    background-color: #f2f2f2;
+    padding:20px;
+    height:100vh;
+}
+.sec-6-title-mt{
+    margin-top:45px;
+}
 /* Media queries */
 
 @media only screen and (max-width: 1350px) {
