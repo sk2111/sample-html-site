@@ -160,15 +160,15 @@ class SwitchViewHandlerSec extends commonHelpers{
         this._handleViewLogic();
     }
 }
-const switchViewHandler3Ins = new SwitchViewHandlerSec(['CORPORATE FILINGS','COMPANY ACT','FULL AUDITING'],
+const switchViewHandler3Ins = new SwitchViewHandlerSec(['Corporate Filings','Company Act','Full Auditing'],
                                                       {0:sec3round0,1:sec3round1,2:sec3round2},
                                                       {0:sec3View0,1:sec3View1,2:sec3View2},
                                                       sec3TitleHeader);
-const switchViewHandler4Ins = new SwitchViewHandlerSec(['START UP SERVICES','NEW SERVICES','FULL TAXATION'],
+const switchViewHandler4Ins = new SwitchViewHandlerSec(['Start Up Services','New Services','Full Taxation'],
                                                       {0:sec4round0,1:sec4round1,2:sec4round2},
                                                       {0:sec4View0,1:sec4View1,2:sec4View2},
                                                       sec4TitleHeader);
-const switchViewHandler5Ins = new SwitchViewHandlerSec(['OUR FINANCE EXPERTISE','FINANCE SERVICES','FINANCE CONSULTING'],
+const switchViewHandler5Ins = new SwitchViewHandlerSec(['Our Finance Expertise','Finance Services','Finance Consulting'],
                                                       {0:sec5round0,1:sec5round1,2:sec5round2},
                                                       {0:sec5View0,1:sec5View1,2:sec5View2},
                                                       sec5TitleHeader);
