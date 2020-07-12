@@ -32,6 +32,7 @@ class NextroTestimonialCard extends HTMLElement {
             background-color:white;
             clip-path: polygon(5% 0%, 100% 0, 95% 100%, 0% 100%);
             padding:25px 70px 25px 85px;
+            margin-top:80px;
         }
         .image-wrapper{
             height:100px;
@@ -79,7 +80,7 @@ class NextroTestimonialCard extends HTMLElement {
         <div class="testimonial-con">
           <div class="testi-holder flex-row align-cen">
              <div class="image-wrapper">
-                <img class="face" src="/assets/face/sample-face.jpg">
+                <img id="face-img" class="face" src="">
              </div>
              <div class="flex-row align-cen">
                 <span id="card-description" class="card-description"></span>
@@ -90,6 +91,7 @@ class NextroTestimonialCard extends HTMLElement {
           </div>
         </div>
         `;
+        this.faceImage =  this.shadowRoot.querySelector('#face-img');
         this.cardDescription =  this.shadowRoot.querySelector('#card-description');
         this.ratingBox =  this.shadowRoot.querySelector('#rating-box');
     }
@@ -97,6 +99,9 @@ class NextroTestimonialCard extends HTMLElement {
 
     static get observedAttributes() {
         return ['img-src','card-description','rating'];
+    }
+    handleImageSrc(val){
+        this.faceImage.src = val;
     }
     handleDescriptionText(val){
         this.cardDescription.innerText = val;
@@ -108,7 +113,7 @@ class NextroTestimonialCard extends HTMLElement {
         {
             viewTemplate +=template; 
         }
-        viewTemplate = '<div style="color:#4f4f4f;font-weight:bold;">Rating &nbsp&nbsp;&nbsp; </div>'+viewTemplate;
+        viewTemplate = '<div style="width:200px;" class="flex-row"><div style="color:#4f4f4f;font-weight:bold;margin-right:10px;">Rating &nbsp&nbsp;&nbsp; </div>'+viewTemplate+'</div>';
         this.ratingBox.innerHTML = viewTemplate;
     }
     attributeChangedCallback(attrName,oldVal,newVal) {
@@ -119,6 +124,10 @@ class NextroTestimonialCard extends HTMLElement {
         if(attrName === 'rating')
         {
             this.handleRating(newVal);
+        }
+        if(attrName === 'img-src')
+        {
+            this.handleImageSrc(newVal);
         }
     }
     disconnectedCallback() {  }
