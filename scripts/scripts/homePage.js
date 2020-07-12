@@ -182,7 +182,7 @@ class SwitchViewHandlerSec extends commonHelpers{
         //change header title
         this.changeHeaderTitle();
     }
-    moveSec3Right(){
+    moveSecRight(){
         this.isRightSideAnimation = true;
         this.isArrowClicked = true;
         if(this.currentViewIndex === 2)
@@ -194,7 +194,7 @@ class SwitchViewHandlerSec extends commonHelpers{
         }
         this._handleViewLogic();
     }
-    moveSec3Left(){
+    moveSecLeft(){
        this.isRightSideAnimation = false;
        this.isArrowClicked = true;
        if(this.currentViewIndex === 0)
@@ -228,7 +228,7 @@ const switchViewHandler5Ins = new SwitchViewHandlerSec(['Our Finance Expertise',
                                                       sec5TitleHeader);
 
 
-
+// AddEvent listener for scroll into section
 window.addEventListener('nextro-card-scroll',(e)=>{
     let view = e.detail.cardTitle;
     if(view.toLowerCase() === ACCOUNTS_TITLE_CONSTANT.toLowerCase()){
@@ -246,4 +246,8 @@ window.addEventListener('nextro-card-scroll',(e)=>{
             behavior: 'smooth' 
           });
     }
+});
+// Add Event listner 
+sec3Container.addEventListener('swipe-left',()=>{
+    switchViewHandler3Ins.moveSecLeft();
 })
