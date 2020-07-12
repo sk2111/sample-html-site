@@ -149,17 +149,22 @@ class NextroListCard extends HTMLElement {
                 <p id="card-description" class="description"></p>
             </div>
             <div  class="flex-row perfect-cen">
-                <button class="card-btn">View more</button>
+                <button id="cardbtn-ref" class="card-btn">View more</button>
             </div>
         </div>
         `;
 
         this.cardTitle = this.shadowRoot.querySelector("#card-title");
         this.cardDescription = this.shadowRoot.querySelector("#card-description");
-     
+        this.carBtn = this.shadowRoot.querySelector("#cardbtn-ref");
+        this.carBtn.addEventListener('click',()=>{
+            console.log("Hello");
+        });
     }
     connectedCallback() {  }
+    dispatchEvent(){
 
+    }
     static get observedAttributes() {
         return ['card-title','card-description'];
     }
