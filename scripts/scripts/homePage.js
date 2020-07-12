@@ -20,6 +20,15 @@ const sec4View0  = document.querySelector('#sec-4-view-0');
 const sec4View1  = document.querySelector('#sec-4-view-1');
 const sec4View2  = document.querySelector('#sec-4-view-2');
 
+// section 5 reference 
+const sec5TitleHeader = document.querySelector("#sec-5-titleHeader");
+const sec5round0 = document.querySelector('#sec-5-round-0');
+const sec5round1 = document.querySelector('#sec-5-round-1');
+const sec5round2 = document.querySelector('#sec-5-round-2');
+const sec5View0  = document.querySelector('#sec-5-view-0');
+const sec5View1  = document.querySelector('#sec-5-view-1');
+const sec5View2  = document.querySelector('#sec-5-view-2');
+
 // Section 2 : Animation logic
 //  Observer to find whether element isvisible in screen for section 2
 let isSec2AnimationDone = false; 
@@ -159,5 +168,9 @@ const switchViewHandler4Ins = new SwitchViewHandlerSec(['START UP SERVICES','NEW
                                                       {0:sec4round0,1:sec4round1,2:sec4round2},
                                                       {0:sec4View0,1:sec4View1,2:sec4View2},
                                                       sec4TitleHeader);
+const switchViewHandler5Ins = new SwitchViewHandlerSec(['OUR FINANCE EXPERTISE','FINANCE SERVICES','FINANCE CONSULTING'],
+                                                      {0:sec5round0,1:sec5round1,2:sec5round2},
+                                                      {0:sec5View0,1:sec5View1,2:sec5View2},
+                                                      sec5TitleHeader);
 
 
