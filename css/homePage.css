@@ -123,6 +123,10 @@
     height:20px;
     width:100%;
 }
+/* sec 4 - Taxation section*/
+.sec-4-full-container{
+    background-color: #f2f2f2;
+}
 /* Media queries */
 
 @media only screen and (max-width: 1350px) {
