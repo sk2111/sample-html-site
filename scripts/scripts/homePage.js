@@ -34,27 +34,29 @@ observer.observe(document.querySelector("#sec-2-card-con"));
 // Section 3 : arrow shift logic
 class commonHelpers {
     constructor(){}
-    removeClassArr(arr,className){
+    removeClassArr(arr,...className){
         arr.forEach(element => {
-            element.classList.remove(className);
+            element.classList.remove(...className);
         });
     }
-    addClassArr(arr,className){
+    addClassArr(arr,...className){
         arr.forEach(element => {
-            element.classList.add(className);
+            element.classList.add(...className);
         });
     }
-    removeClassElem(element,className){
-        element.classList.remove(className);
+    removeClassElem(element,...className){
+        element.classList.remove(...className);
     }
-    addClassElem(element,className){
-        element.classList.add(className);
+    addClassElem(element,...className){
+        element.classList.add(...className);
     }
 }
 class SwitchViewHandlerSec3 extends commonHelpers{
     constructor(){
         super();
         this.currentViewIndex = 0;
+        this.lastViewIndex = 0;
+        this.isArrowClicked;
         this.titleHeaders = ['CORPORATE FILINGS','COMPANY ACT','FULL AUDITING'];
         this.roundRef = {
             0:sec3round0,1:sec3round1,2:sec3round2,
@@ -75,6 +77,27 @@ class SwitchViewHandlerSec3 extends commonHelpers{
         this.addClassArr(Object.values(this.viewRef),'dp-view-none');
         // Bring view for selected index
         this.removeClassElem(this.viewRef[this.currentViewIndex],'dp-view-none');
+        // Clear all animation class
+        this.removeClassArr(Object.values(this.viewRef),"animate__animated","animate__fadeInRight","animate__fadeInLeft");
+        // Add Class Elem for animation cheveron arrow
+        if(this.isRightSideAnimation && this.isArrowClicked)
+        {
+            this.addClassElem(this.viewRef[this.currentViewIndex],"animate__animated","animate__fadeInRight");
+        }
+        else if(!this.isRightSideAnimation && this.isArrowClicked){
+            this.addClassElem(this.viewRef[this.currentViewIndex],"animate__animated","animate__fadeInLeft");
+        }
+        // Add Class Elem animation forround btn click
+        if(!this.isArrowClicked)
+        {
+            if(this.lastViewIndex < this.currentViewIndex)
+            {
+                this.addClassElem(this.viewRef[this.currentViewIndex],"animate__animated","animate__fadeInRight");
+            }
+            else{
+                this.addClassElem(this.viewRef[this.currentViewIndex],"animate__animated","animate__fadeInLeft");
+            }
+        }
     }
     changeRoundIndex(){
         //clear all blue classes
@@ -91,6 +114,8 @@ class SwitchViewHandlerSec3 extends commonHelpers{
         this.changeHeaderTitle();
     }
     moveSec3Right(){
+        this.isRightSideAnimation = true;
+        this.isArrowClicked = true;
         if(this.currentViewIndex === 2)
         {
             this.currentViewIndex = 0;
@@ -101,6 +126,8 @@ class SwitchViewHandlerSec3 extends commonHelpers{
         this._handleViewLogic();
     }
     moveSec3Left(){
+       this.isRightSideAnimation = false;
+       this.isArrowClicked = true;
        if(this.currentViewIndex === 0)
        {
         this.currentViewIndex = 2;
@@ -111,7 +138,9 @@ class SwitchViewHandlerSec3 extends commonHelpers{
        this._handleViewLogic();
     }
     roundBtnClickSec3(e){
+        this.isArrowClicked = false;
         let compIndex = e.getAttribute('compIndex');
+        this.lastViewIndex = this.currentViewIndex;
         this.currentViewIndex = Number(compIndex);
         this._handleViewLogic();
     }
