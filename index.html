@@ -15,10 +15,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <!-- utily -->
+    <script src="scripts/scripts/utily.js"></script>
+    <script src="scripts/scripts/pure-swipe.js"></script>
     <!-- Include web component scripts -->
     <script src="scripts/webcomponents/nextroTitleBar.js"></script>
     <script src="scripts/webcomponents/nextroListCard.js"></script>
     <script src="scripts/webcomponents/nextroSpecList.js"></script>
+    <script src="scripts/webcomponents/nextroTestimonial.js"></script>
   </head>
   <body>
     <div class="full-wh">
@@ -61,7 +65,7 @@
       </section>
 
       <!-- Accounts section - 3-->
-      <section class="homepage-sec-3">
+      <section id="sec-3-container" class="homepage-sec-3">
         <div class="flex perfect-cen sec-2-1-text">ACCOUNTS</div>
         <h2 id="sec-3-titleHeader" class="flex perfect-cen sec-2-2-text">Corporate Filings</h2>
         <div class="flex perfect-cen">
@@ -70,7 +74,7 @@
         <div class="flex perfect-cen">
           <div class="flex sec-3-view-con">
             <div class="flex perfect-cen arrow-con-rl">
-              <img class="cheveron-icon" src="assets/icons/left-cheveron.svg" onclick="switchViewHandler3Ins.moveSec3Left()">
+              <img class="cheveron-icon" src="assets/icons/left-cheveron.svg" onclick="switchViewHandler3Ins.moveSecLeft()">
             </div>
             <div id="sec3-anim-con" class="sec-3-middle-view flex perfect-cen visible-hidden">
               <div id="sec-3-view-0" class="sec-3-content-con"> 
@@ -171,7 +175,7 @@
               </div>
             </div>
             <div class="flex perfect-cen arrow-con-rl">
-              <img class="cheveron-icon" src="assets/icons/right-cheveron.svg" onclick="switchViewHandler3Ins.moveSec3Right()">
+              <img class="cheveron-icon" src="assets/icons/right-cheveron.svg" onclick="switchViewHandler3Ins.moveSecRight()">
             </div>
           </div>
         </div>
@@ -192,7 +196,7 @@
         <div class="flex perfect-cen">
           <div class="flex sec-3-view-con">
             <div class="flex perfect-cen arrow-con-rl">
-              <img class="cheveron-icon" src="assets/icons/left-cheveron.svg" onclick="switchViewHandler4Ins.moveSec3Left()">
+              <img class="cheveron-icon" src="assets/icons/left-cheveron.svg" onclick="switchViewHandler4Ins.moveSecLeft()">
             </div>
             <div id="sec4-anim-con" class="sec-3-middle-view flex perfect-cen visible-hidden">
               <div id="sec-4-view-0" class="sec-3-content-con"> 
@@ -293,7 +297,7 @@
               </div>
             </div>
             <div class="flex perfect-cen arrow-con-rl">
-              <img class="cheveron-icon" src="assets/icons/right-cheveron.svg" onclick="switchViewHandler4Ins.moveSec3Right()">
+              <img class="cheveron-icon" src="assets/icons/right-cheveron.svg" onclick="switchViewHandler4Ins.moveSecRight()">
             </div>
           </div>
         </div>
@@ -314,7 +318,7 @@
         <div class="flex perfect-cen">
           <div class="flex sec-3-view-con">
             <div class="flex perfect-cen arrow-con-rl">
-              <img class="cheveron-icon" src="assets/icons/left-cheveron.svg" onclick="switchViewHandler5Ins.moveSec3Left()">
+              <img class="cheveron-icon" src="assets/icons/left-cheveron.svg" onclick="switchViewHandler5Ins.moveSecLeft()">
             </div>
             <div id="sec5-anim-con" class="sec-3-middle-view flex perfect-cen visible-hidden">
               <div id="sec-5-view-0" class="sec-3-content-con"> 
@@ -415,7 +419,7 @@
               </div>
             </div>
             <div class="flex perfect-cen arrow-con-rl">
-              <img class="cheveron-icon" src="assets/icons/right-cheveron.svg" onclick="switchViewHandler5Ins.moveSec3Right()">
+              <img class="cheveron-icon" src="assets/icons/right-cheveron.svg" onclick="switchViewHandler5Ins.moveSecRight()">
             </div>
           </div>
         </div>
@@ -425,11 +429,39 @@
             <div id="sec-5-round-2" compIndex="2" class="round-con ml-round" onclick="switchViewHandler5Ins.roundBtnClickSec3(this)"></div>
         </div>
       </section>
-
-
+      
+      <!-- Section - 6  Testimonial -->
+      <section class="homepage-sec-6">
+        <h2  class="flex perfect-cen sec-2-2-text">What Customer Say's</h2>
+        <h2  class="flex perfect-cen sec-2-2-text sec-6-title-mt">About Us !</h2>
+        <div class="flex perfect-cen testimonial-tm">
+          <div class="testimonial-card-con">
+            <nextro-testimonial-card
+              class="testi-cc"
+              img-src="/assets/face/sample-face.jpg"
+              rating="5"
+              card-description="&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Aliquam egestas, velit at condimentum placerat, sem sapien laoreet"
+            >
+            </nextro-testimonial-card>
+            <nextro-testimonial-card
+              class="testi-cc"
+              img-src="/assets/face/sample-face.jpg"
+              rating="5"
+              card-description="&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Aliquam egestas, velit at condimentum placerat, sem sapien laoreet"
+            >
+            </nextro-testimonial-card>
+            <nextro-testimonial-card
+              class="testi-cc"
+              img-src="/assets/face/sample-face.jpg"
+              rating="4"
+              card-description="&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Aliquam egestas, velit at condimentum placerat, sem sapien laoreet"
+            >
+            </nextro-testimonial-card>
+          </div>
+        </div>
+      </section>
       
     </div>
-    <script src="scripts/scripts/utily.js"></script>
     <script src="scripts/scripts/homePage.js"></script>
   </body>
 </html>
