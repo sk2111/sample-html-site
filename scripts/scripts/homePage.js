@@ -3,13 +3,22 @@ const sec2Taxation = document.querySelector('#taxation-card-sec-2');
 const sec2Finance = document.querySelector('#finance-card-sec-2');
 
 // section 3 reference
-const sec3TitleHeader = document.querySelector("#sec-2-titleHeader");
+const sec3TitleHeader = document.querySelector("#sec-3-titleHeader");
 const sec3round0 = document.querySelector('#sec-3-round-0');
 const sec3round1 = document.querySelector('#sec-3-round-1');
 const sec3round2 = document.querySelector('#sec-3-round-2');
 const sec3View0  = document.querySelector('#sec-3-view-0');
 const sec3View1  = document.querySelector('#sec-3-view-1');
 const sec3View2  = document.querySelector('#sec-3-view-2');
+
+// section 4 reference 
+const sec4TitleHeader = document.querySelector("#sec-4-titleHeader");
+const sec4round0 = document.querySelector('#sec-4-round-0');
+const sec4round1 = document.querySelector('#sec-4-round-1');
+const sec4round2 = document.querySelector('#sec-4-round-2');
+const sec4View0  = document.querySelector('#sec-4-view-0');
+const sec4View1  = document.querySelector('#sec-4-view-1');
+const sec4View2  = document.querySelector('#sec-4-view-2');
 
 // Section 2 : Animation logic
 //  Observer to find whether element isvisible in screen for section 2
@@ -51,26 +60,23 @@ class commonHelpers {
         element.classList.add(...className);
     }
 }
-class SwitchViewHandlerSec3 extends commonHelpers{
-    constructor(){
+class SwitchViewHandlerSec extends commonHelpers{
+    constructor(titleHeaders,roundRef,viewRef,secTitleRef){
         super();
         this.currentViewIndex = 0;
         this.lastViewIndex = 0;
         this.isArrowClicked;
-        this.titleHeaders = ['CORPORATE FILINGS','COMPANY ACT','FULL AUDITING'];
-        this.roundRef = {
-            0:sec3round0,1:sec3round1,2:sec3round2,
-        };
-        this.viewRef = {
-            0:sec3View0,1:sec3View1,2:sec3View2,
-        };
+        this.titleHeaders = titleHeaders;
+        this.roundRef = roundRef;
+        this.viewRef = viewRef;
+        this.secTitleHeader = secTitleRef;
     }
     changeHeaderTitle(){
-        sec3TitleHeader.innerHTML = '';
-        sec3TitleHeader.innerHTML = this.titleHeaders[this.currentViewIndex];
-        sec3TitleHeader.classList.remove("animate__animated","animate__fadeInUp");
-        sec3TitleHeader.offsetHeight;//Forcing animation to occur since removing class and add class wont trigger layout operation
-        sec3TitleHeader.classList.add("animate__animated","animate__fadeInUp");
+        this.secTitleHeader.innerHTML = '';
+        this.secTitleHeader.innerHTML = this.titleHeaders[this.currentViewIndex];
+        this.secTitleHeader.classList.remove("animate__animated","animate__fadeInUp");
+        this.secTitleHeader.offsetHeight;//Forcing animation to occur since removing class and add class wont trigger layout operation
+        this.secTitleHeader.classList.add("animate__animated","animate__fadeInUp");
     }
     changeViewIndex(){
         //hide everything
@@ -145,7 +151,13 @@ class SwitchViewHandlerSec3 extends commonHelpers{
         this._handleViewLogic();
     }
 }
-
-const switchViewHandlerIns = new SwitchViewHandlerSec3();
+const switchViewHandler3Ins = new SwitchViewHandlerSec(['CORPORATE FILINGS','COMPANY ACT','FULL AUDITING'],
+                                                      {0:sec3round0,1:sec3round1,2:sec3round2},
+                                                      {0:sec3View0,1:sec3View1,2:sec3View2},
+                                                      sec3TitleHeader);
+const switchViewHandler4Ins = new SwitchViewHandlerSec(['START UP SERVICES','NEW SERVICES','FULL TAXATION'],
+                                                      {0:sec4round0,1:sec4round1,2:sec4round2},
+                                                      {0:sec4View0,1:sec4View1,2:sec4View2},
+                                                      sec4TitleHeader);
 
 
