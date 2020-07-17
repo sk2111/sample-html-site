@@ -133,7 +133,7 @@ const observer6Second = new IntersectionObserver(function(entries) {
             setTimeout(()=>{
                 sec6Card2.classList.remove('visible-hidden');
                 sec6Card2.setAttribute('animation','startanimation');
-            },600);
+            },400);
         }
     }
 }, { threshold: [1] });
@@ -145,7 +145,7 @@ const observer6Third = new IntersectionObserver(function(entries) {
             setTimeout(()=>{
                 sec6Card3.classList.remove('visible-hidden');
                 sec6Card3.setAttribute('animation','startanimation');
-            },1200);
+            },900);
         }
     }
 }, { threshold: [0.5] });
@@ -296,10 +296,49 @@ window.addEventListener('nextro-card-scroll',(e)=>{
           });
     }
 });
-// Add Event listner 
-sec3Container.addEventListener('swipe-left',()=>{
-    switchViewHandler3Ins.moveSecLeft();
-})
-document.addEventListener('swipe-left',()=>{
-    switchViewHandler3Ins.moveSecLeft();
-})
+// Add Event listner for mobile swipes
+sec3Container.addEventListener('touchstart', handleTouchStart, false);        
+sec4Container.addEventListener('touchstart', handleTouchStart, false);        
+sec5Container.addEventListener('touchstart', handleTouchStart, false);        
+sec3Container.addEventListener('touchmove',(e)=>{handleTouchMove(e,'sec3',switchViewHandler3Ins)}, false);
+sec4Container.addEventListener('touchmove',(e)=>{handleTouchMove(e,'sec4',switchViewHandler4Ins)}, false);
+sec5Container.addEventListener('touchmove',(e)=>{handleTouchMove(e,'sec5',switchViewHandler5Ins)}, false);
+
+let xDown = null;                                                        
+let yDown = null;
+
+function getTouches(evt) {
+  return evt.touches ||       
+         evt.originalEvent.touches; 
+}                                                     
+
+function handleTouchStart(evt) {
+    const firstTouch = getTouches(evt)[0];                                      
+    xDown = firstTouch.clientX;                                      
+    yDown = firstTouch.clientY;                                      
+};                                                
+
+function handleTouchMove(evt,type,ref) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    let xUp = evt.touches[0].clientX;                                    
+    let yUp = evt.touches[0].clientY;
+
+    let xDiff = xDown - xUp;
+    let yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
+        if ( xDiff > 0 ) {
+            // Left swipe
+            ref.moveSecLeft();
+        } else {
+            /* right swipe */
+            ref.moveSecRight();
+        }                       
+    }                                                              
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};
