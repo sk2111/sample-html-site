@@ -47,12 +47,12 @@ class NextroFooterCard extends HTMLElement {
         }
         .cate-text{
             color:white;
-            font-size:14px;
+            font-size:13px;
             margin-left:19px;
         }
         .copyright{
             color:white;
-            font-size:12px;
+            font-size:11px;
             margin-top:20px;
             margin-left:10px;
         }
