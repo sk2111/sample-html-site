@@ -221,8 +221,12 @@ class NextroTestimonialCard extends HTMLElement {
     static get observedAttributes() {
         return ['img-src','card-description','rating','animation'];
     }
-    handleAnimation(){
-        //animate__animated animate__bounceInRight
+    handleAnimation(val){
+        if(val === 'startanimation')
+        {
+            let ref = this.shadowRoot.querySelector('.testimonial-con');
+            ref.classList.add("animate__animated","animate__bounceInRight");
+        }
     }
     handleImageSrc(val){
         this.faceImage.src = val;
@@ -252,6 +256,10 @@ class NextroTestimonialCard extends HTMLElement {
         if(attrName === 'img-src')
         {
             this.handleImageSrc(newVal);
+        }
+        if(attrName === 'animation')
+        {
+            this.handleAnimation(newVal);
         }
     }
     disconnectedCallback() {  }

@@ -110,23 +110,48 @@ observer5.observe(document.querySelector("#sec5-anim-con"));
 
 // sec-6 Animation logic - Testimonial
 let isSec6AnimationDoneCard1 = false; 
-const observer6 = new IntersectionObserver(function(entries) {
+let isSec6AnimationDoneCard2 = false; 
+let isSec6AnimationDoneCard3 = false; 
+const observer6First = new IntersectionObserver(function(entries) {
 	if(entries[0].isIntersecting === true){
         if(!isSec6AnimationDoneCard1)
         {
             isSec6AnimationDoneCard1 = true;
-            console.log("section6 animation calling");
             setTimeout(()=>{
                 sec6Card1.classList.remove('visible-hidden');
-                sec6Card1.offsetHeight;
-                sec6Card1.classList.add("animate__animated","animate__bounceInRight");
-            },70);
+                sec6Card1.setAttribute('animation','startanimation');
+            },100);
         }
     }
         
-}, { threshold: [0.1] });
-observer6.observe(sec6Card1);
-
+}, { threshold: [1] });
+const observer6Second = new IntersectionObserver(function(entries) {
+    if(entries[0].isIntersecting === true){
+        if(!isSec6AnimationDoneCard2)
+        {
+            isSec6AnimationDoneCard2 = true;
+            setTimeout(()=>{
+                sec6Card2.classList.remove('visible-hidden');
+                sec6Card2.setAttribute('animation','startanimation');
+            },600);
+        }
+    }
+}, { threshold: [1] });
+const observer6Third = new IntersectionObserver(function(entries) {
+    if(entries[0].isIntersecting === true){
+        if(!isSec6AnimationDoneCard3)
+        {
+            isSec6AnimationDoneCard3 = true;
+            setTimeout(()=>{
+                sec6Card3.classList.remove('visible-hidden');
+                sec6Card3.setAttribute('animation','startanimation');
+            },1200);
+        }
+    }
+}, { threshold: [0.5] });
+observer6First.observe(sec6Card1);
+observer6Second.observe(sec6Card2);
+observer6Third.observe(sec6Card3);
 // Section 3 : arrow shift logic
 class commonHelpers {
     constructor(){}
