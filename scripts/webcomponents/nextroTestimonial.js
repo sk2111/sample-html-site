@@ -74,6 +74,97 @@ class NextroTestimonialCard extends HTMLElement {
             padding-right:30px;
             height:40px;
         }
+        :root{
+            --animate-duration: 1s;
+            --animate-delay: 1s;
+            --animate-repeat: 1;
+        }
+        .animate__animated {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-duration: var(--animate-duration);
+            animation-duration: var(--animate-duration);
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        @-webkit-keyframes bounceInRight {
+            from,
+            60%,
+            75%,
+            90%,
+            to {
+                -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(3000px, 0, 0) scaleX(3);
+                transform: translate3d(3000px, 0, 0) scaleX(3);
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: translate3d(-25px, 0, 0) scaleX(1);
+                transform: translate3d(-25px, 0, 0) scaleX(1);
+            }
+
+            75% {
+                -webkit-transform: translate3d(10px, 0, 0) scaleX(0.98);
+                transform: translate3d(10px, 0, 0) scaleX(0.98);
+            }
+
+            90% {
+                -webkit-transform: translate3d(-5px, 0, 0) scaleX(0.995);
+                transform: translate3d(-5px, 0, 0) scaleX(0.995);
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        @keyframes bounceInRight {
+            from,
+            60%,
+            75%,
+            90%,
+            to {
+                -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(3000px, 0, 0) scaleX(3);
+                transform: translate3d(3000px, 0, 0) scaleX(3);
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: translate3d(-25px, 0, 0) scaleX(1);
+                transform: translate3d(-25px, 0, 0) scaleX(1);
+            }
+
+            75% {
+                -webkit-transform: translate3d(10px, 0, 0) scaleX(0.98);
+                transform: translate3d(10px, 0, 0) scaleX(0.98);
+            }
+
+            90% {
+                -webkit-transform: translate3d(-5px, 0, 0) scaleX(0.995);
+                transform: translate3d(-5px, 0, 0) scaleX(0.995);
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        .animate__bounceInRight{
+            -webkit-animation-name: bounceInRight;
+            animation-name: bounceInRight;
+        }
         /*Media queries*/
         @media only screen and (min-width: 700px) and (max-width: 1000px) {
             .card-description{
@@ -128,7 +219,10 @@ class NextroTestimonialCard extends HTMLElement {
     connectedCallback() {  }
 
     static get observedAttributes() {
-        return ['img-src','card-description','rating'];
+        return ['img-src','card-description','rating','animation'];
+    }
+    handleAnimation(){
+        //animate__animated animate__bounceInRight
     }
     handleImageSrc(val){
         this.faceImage.src = val;

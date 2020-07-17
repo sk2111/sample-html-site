@@ -35,6 +35,10 @@ const sec5View0  = document.querySelector('#sec-5-view-0');
 const sec5View1  = document.querySelector('#sec-5-view-1');
 const sec5View2  = document.querySelector('#sec-5-view-2');
 const sec5Anim   = document.querySelector('#sec5-anim-con');
+// section 6 reference
+const sec6Card1 = document.querySelector("#sec-6-card-1");
+const sec6Card2 = document.querySelector("#sec-6-card-2");
+const sec6Card3 = document.querySelector("#sec-6-card-3");
 
 // Section 2 : Animation logic
 //  Observer to find whether element isvisible in screen for section 2
@@ -103,6 +107,26 @@ const observer5 = new IntersectionObserver(function(entries) {
         
 }, { threshold: [0.1] });
 observer5.observe(document.querySelector("#sec5-anim-con"));
+
+// sec-6 Animation logic - Testimonial
+let isSec6AnimationDoneCard1 = false; 
+const observer6 = new IntersectionObserver(function(entries) {
+	if(entries[0].isIntersecting === true){
+        if(!isSec6AnimationDoneCard1)
+        {
+            isSec6AnimationDoneCard1 = true;
+            console.log("section6 animation calling");
+            setTimeout(()=>{
+                sec6Card1.classList.remove('visible-hidden');
+                sec6Card1.offsetHeight;
+                sec6Card1.classList.add("animate__animated","animate__bounceInRight");
+            },70);
+        }
+    }
+        
+}, { threshold: [0.1] });
+observer6.observe(sec6Card1);
+
 // Section 3 : arrow shift logic
 class commonHelpers {
     constructor(){}
@@ -249,5 +273,8 @@ window.addEventListener('nextro-card-scroll',(e)=>{
 });
 // Add Event listner 
 sec3Container.addEventListener('swipe-left',()=>{
+    switchViewHandler3Ins.moveSecLeft();
+})
+document.addEventListener('swipe-left',()=>{
     switchViewHandler3Ins.moveSecLeft();
 })
