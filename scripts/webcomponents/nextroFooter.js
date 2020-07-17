@@ -74,6 +74,10 @@ class NextroFooterCard extends HTMLElement {
             margin-left:15px;
             letter-spacing:0.2px;
         }
+        .email-text{
+            margin-left:15px;
+            letter-spacing:1px;
+        }
         /*Media queries*/
         @media only screen and (max-width: 700px) {
           
@@ -95,9 +99,10 @@ class NextroFooterCard extends HTMLElement {
                     <img class="phone" src="/assets/icons/phone.svg">
                     <div class="locate-text phone-text">9990303929 , 81249919200</div>
                 </div>
-
-                <div class="locate-text">Email - info@nextroservices.com</div>
-                <div class="locate-text">4/21 Saibaba Colony, Coimbatore North, Pin Code - 641107</div>
+                <div class="flex-row align-cen mt-10 phone-con">
+                    <img class="phone" src="/assets/icons/email.svg">
+                    <div class="locate-text email-text">info@nextroservices.com</div>
+                </div>
                 <div class="copyright">Copyrights © 2020 by Nextro Pvt.Ltd.</div>
             </div>
           </div>
