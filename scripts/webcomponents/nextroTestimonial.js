@@ -53,16 +53,16 @@ class NextroTestimonialCard extends HTMLElement {
             font-style:italic;
         }
         .card-description::before {
-            content:'“';
-            font-size: 50px;
+            content:'"';
+            font-size: 40px;
             color:#4f4f4f;
-            vertical-align: -.4em;
+            vertical-align: -.3em;
         }   
         .card-description::after {
-            content:'”';
-            font-size: 50px;
+            content:'"';
+            font-size: 40px;
             color:#4f4f4f;
-            vertical-align: -.4em;
+            vertical-align: -.2em;
         }
         .rating-con{
             display:flex;
