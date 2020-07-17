@@ -53,14 +53,26 @@ class NextroFooterCard extends HTMLElement {
         .locate-text{
             color:white;
             font-size:13px;
-            margin-left:50px;
-            margin-top:10px;
         }
         .copyright{
             color:white;
             font-size:11px;
             margin-top:15px;
             margin-left:10px;
+        }
+        .mt-10{
+            margin-top:10px;
+        }
+        .phone{
+            height:20px;
+            width:20px;
+        }
+        .phone-con{
+            width:210px;
+        }
+        .phone-text{
+            margin-left:15px;
+            letter-spacing:0.2px;
         }
         /*Media queries*/
         @media only screen and (max-width: 700px) {
@@ -79,6 +91,12 @@ class NextroFooterCard extends HTMLElement {
                     <div class="cate-text">TAXATION</div>
                     <div class="cate-text">FINANCE</div>
                 </div>
+                <div class="flex-row align-cen mt-10 phone-con">
+                    <img class="phone" src="/assets/icons/phone.svg">
+                    <div class="locate-text phone-text">9990303929 , 81249919200</div>
+                </div>
+
+                <div class="locate-text">Email - info@nextroservices.com</div>
                 <div class="locate-text">4/21 Saibaba Colony, Coimbatore North, Pin Code - 641107</div>
                 <div class="copyright">Copyrights © 2020 by Nextro Pvt.Ltd.</div>
             </div>
