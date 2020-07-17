@@ -50,10 +50,16 @@ class NextroFooterCard extends HTMLElement {
             font-size:13px;
             margin-left:19px;
         }
+        .locate-text{
+            color:white;
+            font-size:13px;
+            margin-left:50px;
+            margin-top:10px;
+        }
         .copyright{
             color:white;
             font-size:11px;
-            margin-top:20px;
+            margin-top:15px;
             margin-left:10px;
         }
         /*Media queries*/
@@ -62,7 +68,7 @@ class NextroFooterCard extends HTMLElement {
         }
         </style>
         <div class="footer-con">
-          <div class="main-con flex-row">
+          <div class="main-con flex-row perfect-cen">
             <div class="footer-sec-1 flex-col perfect-cen">
                 <div class="flex-row align-cen">
                     <img class="logo" src="/assets/logo/nextro_logo_white.svg">
@@ -73,10 +79,9 @@ class NextroFooterCard extends HTMLElement {
                     <div class="cate-text">TAXATION</div>
                     <div class="cate-text">FINANCE</div>
                 </div>
+                <div class="locate-text">4/21 Saibaba Colony, Coimbatore North, Pin Code - 641107</div>
                 <div class="copyright">Copyrights © 2020 by Nextro Pvt.Ltd.</div>
             </div>
-            <div class="footer-sec-2"></div>
-            <div class="footer-sec-3"></div>
           </div>
         </div>
         `;
