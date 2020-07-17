@@ -85,7 +85,7 @@ class NextroTestimonialCard extends HTMLElement {
                 flex-direction:column;
             }
             .testimonial-con{
-                padding: 25px 45px 25px 8px;
+                padding: 25px 40px 25px 8px;
             }
             .card-description{
                 margin-top:15px;
@@ -97,11 +97,13 @@ class NextroTestimonialCard extends HTMLElement {
         @media only screen and (max-width: 360px) {
             .rating-con{
                 padding-right:5px;
+                justify-content:center;
             }
         }
         @media only screen and (max-width: 290px) {
             .rating-con{
               display:none;
+              justify-content:center;
             }
         }
         </style>
