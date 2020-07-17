@@ -33,6 +33,9 @@ class NextroTestimonialCard extends HTMLElement {
             padding:25px 70px 0px 85px;
             margin-top:80px;
         }
+        .testi-holder{
+            flex-direction:row;
+        }
         .image-wrapper{
             min-height:100px;
             min-width:100px;
@@ -51,6 +54,7 @@ class NextroTestimonialCard extends HTMLElement {
             margin-left:30px;
             line-height:28px;
             font-style:italic;
+            text-align: justify;
         }
         .card-description::before {
             content:'"';
@@ -71,8 +75,34 @@ class NextroTestimonialCard extends HTMLElement {
             height:40px;
         }
         /*Media queries*/
-        @media only screen and (max-width: 700px) {
-          
+        @media only screen and (min-width: 700px) and (max-width: 1000px) {
+            .card-description{
+                font-size:14.08px;
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            .testi-holder{
+                flex-direction:column;
+            }
+            .testimonial-con{
+                padding: 25px 45px 25px 8px;
+            }
+            .card-description{
+                margin-top:15px;
+            }
+            .rating-boxing{
+                margin-top:15px !important;
+            }
+        }
+        @media only screen and (max-width: 360px) {
+            .rating-con{
+                padding-right:5px;
+            }
+        }
+        @media only screen and (max-width: 290px) {
+            .rating-con{
+              display:none;
+            }
         }
         </style>
         <div class="testimonial-con">
@@ -111,7 +141,7 @@ class NextroTestimonialCard extends HTMLElement {
         {
             viewTemplate +=template; 
         }
-        viewTemplate = '<div style="width:200px;" class="flex-row"><div style="color:#4f4f4f;font-weight:bold;margin-right:10px;">Rating &nbsp&nbsp;&nbsp; </div>'+viewTemplate+'</div>';
+        viewTemplate = '<div style="width:200px;margin-top:5px;" class="flex-row rating-boxing"><div style="color:#4f4f4f;font-weight:bold;margin-right:10px;font-size:16px;">Rating &nbsp&nbsp;&nbsp; </div>'+viewTemplate+'</div>';
         this.ratingBox.innerHTML = viewTemplate;
     }
     attributeChangedCallback(attrName,oldVal,newVal) {
