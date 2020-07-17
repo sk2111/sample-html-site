@@ -330,12 +330,13 @@ function handleTouchMove(evt,type,ref) {
     let yDiff = yDown - yUp;
 
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
-        if ( xDiff > 0 ) {
+        console.log(xDiff);
+        if ( xDiff > 10 ) {
             // Left swipe
-            ref.moveSecLeft();
-        } else {
-            /* right swipe */
             ref.moveSecRight();
+        } else if(xDiff < -10){
+            /* right swipe */
+            ref.moveSecLeft();
         }                       
     }                                                              
     /* reset values */
