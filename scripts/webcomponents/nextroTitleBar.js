@@ -148,15 +148,15 @@ class NextroTitleBar extends HTMLElement {
                 <div class="menu-icon"></div>
               </div>
               <div class="normal-nav-bar flex-row">
-                <a id="nn-home" my-name="home" href="#" class="normal-anchor home-wid perfect-cen">Home</a>
-                <a id="nn-services" my-name="services" href="#" class="normal-anchor perfect-cen">Services</a>
+                <a id="nn-home" my-name="home" href="/" class="normal-anchor home-wid perfect-cen">Home</a>
+                <a id="nn-services" my-name="services" href="/services.html" class="normal-anchor perfect-cen">Services</a>
                 <a id="nn-about" my-name="about" href="#" class="normal-anchor perfect-cen">About Us</a>
                 <a id="nn-contact" my-name="contact" href="#" class="normal-anchor contact-us-mr sperfect-cen">Contact Us</a>
               </div>
            </div>
            <div id="ham-content" class="ham-content flex-col align-cen">
-                <a  id="hh-home" href="#" class="ham-anchor">Home</a>
-                <a  id="hh-services" href="#" class="ham-anchor">Services</a>
+                <a  id="hh-home" href="/" class="ham-anchor">Home</a>
+                <a  id="hh-services" href="/services.html" class="ham-anchor">Services</a>
                 <a  id="hh-about" href="#" class="ham-anchor">About Us</a>
                 <a  id="hh-contact" href="#" class="ham-anchor">Contact Us</a>
            </div>
