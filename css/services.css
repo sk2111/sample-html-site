@@ -46,10 +46,14 @@
     margin-left:10px;
 }
 .mt-sub-sec-1{
-    margin-top:40px;
+    margin-top:15px;
+    height:50px;
 }
 .full-wid{
     width:100%;
+}
+.c-blue{
+    color:#0747a6;
 }
 .highlighted-tab{
     background-color: white;
