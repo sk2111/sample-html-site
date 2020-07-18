@@ -1,0 +1,67 @@
+*{
+    font-family: 'Poppins';
+    user-select: none;
+}
+.blue-color-background{
+    background-color: #0747a6;
+}
+.dp-view-none{
+    display:none !important;
+}
+.opac-0{
+    opacity: 0;
+}
+.visible-hidden{
+    visibility: hidden;
+}
+.m-poi{
+    cursor:pointer;
+}
+/* Services page sec 1 */
+.section-1-services{
+    background-color: #f2f2f2;
+    padding:35px 35px 35px 0px;
+}
+.services-title-tab{
+    width:20%;
+    min-width:260px;
+}
+.sec-1-tit{
+    color: #757575;
+    font-weight: 40px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-top:50px;
+}
+.sub-tab-icon{
+    height:33px;
+    width:33px;
+}
+.sub-tab-font{
+    font-size:18px;
+    color:#9e9e9e;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width:120px;
+    margin-left:10px;
+}
+.mt-sub-sec-1{
+    margin-top:40px;
+}
+.full-wid{
+    width:100%;
+}
+.highlighted-tab{
+    background-color: white;
+    color:#0747a6;
+    padding:15px 0px;
+    border-right: 10px solid #0747a6;
+    border-left: 10px solid #0747a6;
+}
+
+
+.sec-1-category-con{
+    width:100%;
+    background-color: white;
+    border-radius:5px;
+}
