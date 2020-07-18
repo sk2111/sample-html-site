@@ -45,7 +45,6 @@ const sec6Card3 = document.querySelector("#sec-6-card-3");
 let isSec2AnimationDone = false; 
 const observer = new IntersectionObserver(function(entries) {
 	if(entries[0].isIntersecting === true){
-        console.log('Element has just become visible in screen');
         if(!isSec2AnimationDone)
         {
             isSec2AnimationDone = true;
