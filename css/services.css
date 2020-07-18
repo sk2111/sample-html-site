@@ -98,11 +98,11 @@
 }
 @media only screen and (max-width: 700px) {
     .mt-sub-sec-1{
-        height:20px;
+        height:23px;
     }
     .mt-sub-2-3{
         margin-top:5px;
-        height:30px;
+        height:23px;
     }
     .sec-1-tit{
         font-size: 1rem;
