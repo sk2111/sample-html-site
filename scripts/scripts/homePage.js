@@ -147,10 +147,36 @@ const observer6Third = new IntersectionObserver(function(entries) {
             },900);
         }
     }
-}, { threshold: [0.5] });
+}, { threshold: [0.35] });
 observer6First.observe(sec6Card1);
 observer6Second.observe(sec6Card2);
 observer6Third.observe(sec6Card3);
+// sectio 6 fallback observer
+let isSec6AnimationFallback = false;
+const observer6Fallback = new IntersectionObserver(function(entries) {
+    if(entries[0].isIntersecting === true){
+        if(!isSec6AnimationFallback)
+        {
+            console.log("Executing fallabck code");
+            isSec6AnimationFallback = true;
+            setTimeout(()=>{
+                sec6Card1.classList.remove('visible-hidden');
+                sec6Card1.setAttribute('animation','startanimation');
+                setTimeout(()=>{
+                    sec6Card2.classList.remove('visible-hidden');
+                    sec6Card2.setAttribute('animation','startanimation');
+                },500);
+                setTimeout(()=>{
+                    sec6Card3.classList.remove('visible-hidden');
+                    sec6Card3.setAttribute('animation','startanimation');
+                },1000);
+            },3000);
+        }
+    }
+}, { threshold: [1] });
+observer6Fallback.observe(document.querySelector("#sec-6-total-con-fallback"));
+
+
 // Section 3 : arrow shift logic
 class commonHelpers {
     constructor(){}
