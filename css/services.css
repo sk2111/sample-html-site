@@ -98,10 +98,10 @@
 }
 @media only screen and (max-width: 700px) {
     .mt-sub-sec-1{
-        height:30px;
+        height:20px;
     }
     .mt-sub-2-3{
-        margin-top:0px;
+        margin-top:5px;
         height:30px;
     }
     .sec-1-tit{
@@ -112,5 +112,8 @@
     }
     .section-1-services{
         padding:15px 10px 15px 0px;
+    }
+    .highlighted-tab{
+        padding: 12px 0px;
     }
 }
