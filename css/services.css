@@ -32,20 +32,25 @@
     font-weight: bold;
     letter-spacing: 1.5px;
     margin-top:50px;
+    text-align: center;
+    margin-bottom: 0px;
 }
 .sub-tab-icon{
-    height:33px;
-    width:33px;
+    height:25px;
+    width:25px;
 }
 .sub-tab-font{
-    font-size:1.125rem;
+    font-size:1rem;
     color:#9e9e9e;
     font-weight: bold;
-    letter-spacing: 1px;
     width:120px;
     margin-left:10px;
 }
 .mt-sub-sec-1{
+    margin-top:15px;
+    height:50px;
+}
+.mt-sub-2-3{
     margin-top:15px;
     height:50px;
 }
@@ -68,4 +73,40 @@
     width:100%;
     background-color: white;
     border-radius:5px;
+}
+
+
+
+/* Media quey handle */
+
+@media only screen and (max-width: 900px) {
+    .services-title-tab{
+        width:20%;
+        min-width:90px;
+    }
+    .sec-1-tit{
+        font-size: 1.3rem;
+    }
+    .sub-tab-icon{
+        display: none;
+    }
+    .sub-tab-font{
+        font-size: 0.85rem;
+        text-align:center;
+        margin: 0px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .mt-sub-2-3{
+        margin-top:0px;
+    }
+    .sec-1-tit{
+        font-size: 1rem;
+    }
+    .sub-tab-font{
+        font-size: 0.65rem;
+    }
+    .section-1-services{
+        padding:15px 10px 15px 0px;
+    }
 }
