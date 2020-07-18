@@ -32,7 +32,6 @@ class servicesHandlerClass {
         childNodes.forEach(element => {
             if(element.localName === 'img')
             {
-                console.log("Img coming");
                 element.src ="/assets/logo/nextro_logo_skyblue.svg";
             }
             else if(element.localName === 'div'){
