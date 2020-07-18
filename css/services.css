@@ -40,7 +40,7 @@
     width:25px;
 }
 .sub-tab-font{
-    font-size:1rem;
+    font-size:0.85rem;
     color:#9e9e9e;
     font-weight: bold;
     width:120px;
@@ -91,20 +91,24 @@
         display: none;
     }
     .sub-tab-font{
-        font-size: 0.85rem;
+        font-size: 0.80rem;
         text-align:center;
         margin: 0px;
     }
 }
 @media only screen and (max-width: 700px) {
+    .mt-sub-sec-1{
+        height:30px;
+    }
     .mt-sub-2-3{
         margin-top:0px;
+        height:30px;
     }
     .sec-1-tit{
         font-size: 1rem;
     }
     .sub-tab-font{
-        font-size: 0.65rem;
+        font-size: 0.63rem;
     }
     .section-1-services{
         padding:15px 10px 15px 0px;
