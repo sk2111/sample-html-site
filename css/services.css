@@ -67,15 +67,30 @@
     border-right: 10px solid #0747a6;
     border-left: 10px solid #0747a6;
 }
-
-
 .sec-1-category-con{
     width:100%;
     background-color: white;
     border-radius:5px;
+    padding:35px 45px 35px 45px;
 }
-
-
+.view-main-title{
+    color:#0747a6;
+    font-size: 1.213rem;
+    margin:0px;
+    font-weight:bold;
+}
+.view-main-decription{
+    color:#646464;
+    font-size: 0.8125rem;
+    line-height: 29px;
+    letter-spacing: 1px;
+}
+.view-subcate-title{
+    color:#0747a6;
+    font-size: 1rem;
+    margin:0px;
+    font-weight:bold;
+}
 
 /* Media quey handle */
 
