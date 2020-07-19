@@ -121,6 +121,9 @@ class NextroTitleBar extends HTMLElement {
         .ham-show{
             opacity:1;
         }
+        button,a {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
         /*Media queries*/
         @media only screen and (max-width: 700px) {
             .normal-nav-bar {
