@@ -57,9 +57,9 @@ class NextroServicesCard extends HTMLElement {
         .content{
             padding:0px 40px;
             position:relative;
-            overflow:hidden;
             opacity:1;
-            transition:height 0.85s,opacity 0.80s;
+            overflow:hidden;
+            transition:height 0.85s,opacity 0.85s;
         }
         .content-sty{
             text-align:justify;
@@ -116,17 +116,17 @@ class NextroServicesCard extends HTMLElement {
         </div>
         `;
         const headerCon = this.shadowRoot.querySelector("#header-con"); 
-        
-
-
         headerCon.addEventListener('click',(e)=>{this.headerConClickHandler(e)});
+        window.addEventListener('resize',()=>{this.setHeightWheneverViewChange()});
+
     }
     setHeightWheneverViewChange(){
-        this.contentRef.style.height = this.contentRef.clientHeight+"px";
+        this.contentRef.style.height = this.contentData.clientHeight+"px";
     }
     connectedCallback() {  
         this.arrowRef = this.shadowRoot.querySelector("#arrow");
         this.contentRef = this.shadowRoot.querySelector("#content-holder");
+        this.contentData = this.shadowRoot.querySelector("#content-data");
         this.setHeightWheneverViewChange();
     }
     headerConClickHandler(e){
