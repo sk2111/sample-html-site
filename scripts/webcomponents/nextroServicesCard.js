@@ -27,6 +27,9 @@ class NextroServicesCard extends HTMLElement {
             align-items:center;
         }
         /* Component specific style*/
+        div,p{
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
         .cd-mar{
             margin-top:25px;
         }
@@ -41,6 +44,7 @@ class NextroServicesCard extends HTMLElement {
             color:#616161;
             font-weight:bold;
             font-size:13px;
+            letter-spacing:1px;
         }
         .icon-sty{
             height:25px;
@@ -52,6 +56,7 @@ class NextroServicesCard extends HTMLElement {
         }
         .content{
             padding:15px 40px;
+            position:relative;
         }
         .content-sty{
             text-align:justify;
@@ -59,6 +64,26 @@ class NextroServicesCard extends HTMLElement {
             font-size: 0.8125rem;
             line-height: 27px;
             letter-spacing: 1px;
+        }
+        .price-txt{
+            color:#0747a6;
+            font-size:14px;
+            font-weight:bold;
+            margin:0px;
+            letter-spacing:1px;
+        }
+        .price-tag{
+            position:absolute;
+            right:35px;
+            width:110px;
+        }
+        .price-amt{
+            color:#0747a6;
+            font-weight:bold;
+            font-size:15px;
+        }
+        .mr-9{
+            margin-right:9px;
         }
         /*Media queries*/
         @media only screen and (max-width: 700px) {
@@ -72,6 +97,10 @@ class NextroServicesCard extends HTMLElement {
             </div>
             <div class="content">
                 <p id="content-data" class="content-sty"></p>
+                <div class="flex-row align-cen price-tag">
+                    <div class="price-txt mr-9">PRICE </div>
+                    <div id="price-inject" class="price-amt"></div>
+                </div>
             </div>
         </div>
         `;
@@ -89,7 +118,7 @@ class NextroServicesCard extends HTMLElement {
         this.arrowRef.classList.toggle('rotate-down');
     }
     static get observedAttributes() {
-        return ['card-title','card-data'];
+        return ['card-title','card-data','price-data'];
     }
     handleCardTitle(val){
         let title = this.shadowRoot.querySelector('#title');
@@ -99,6 +128,10 @@ class NextroServicesCard extends HTMLElement {
         let description = this.shadowRoot.querySelector('#content-data');
         description.innerText = val;
     }
+    handlePriceData(val){
+        let price = this.shadowRoot.querySelector('#price-inject');
+        price.innerText = val;
+    }
     attributeChangedCallback(attrName,oldVal,newVal) {
         if(attrName === 'card-title')
         {
@@ -107,6 +140,10 @@ class NextroServicesCard extends HTMLElement {
         if(attrName === 'card-data')
         {
             this.handleCardData(newVal);
+        }
+        if(attrName === 'price-data')
+        {
+            this.handlePriceData(newVal);
         }
     }
     disconnectedCallback() {  }
