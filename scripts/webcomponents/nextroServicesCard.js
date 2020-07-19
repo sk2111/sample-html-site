@@ -55,8 +55,11 @@ class NextroServicesCard extends HTMLElement {
             transform:rotate(-90deg);
         }
         .content{
-            padding:15px 40px;
+            padding:0px 40px;
             position:relative;
+            overflow:hidden;
+            opacity:1;
+            transition:height 0.85s,opacity 0.80s;
         }
         .content-sty{
             text-align:justify;
@@ -64,6 +67,9 @@ class NextroServicesCard extends HTMLElement {
             font-size: 0.8125rem;
             line-height: 27px;
             letter-spacing: 1px;
+            margin-bottom:0px;
+            padding-top:15px;
+            padding-bottom:35px;
         }
         .price-txt{
             color:#0747a6;
@@ -75,6 +81,7 @@ class NextroServicesCard extends HTMLElement {
         .price-tag{
             position:absolute;
             right:35px;
+            bottom: 0px;
             width:110px;
         }
         .price-amt{
@@ -84,6 +91,10 @@ class NextroServicesCard extends HTMLElement {
         }
         .mr-9{
             margin-right:9px;
+        }
+        .hider-con{
+            height:0px !important;
+            opacity:0;
         }
         /*Media queries*/
         @media only screen and (max-width: 700px) {
@@ -95,7 +106,7 @@ class NextroServicesCard extends HTMLElement {
                 <div id="title" class="title-sty"></div>
                 <img id="arrow" class="icon-sty" src="/assets/icons/right-cheveron.svg">
             </div>
-            <div class="content">
+            <div id="content-holder" class="content">
                 <p id="content-data" class="content-sty"></p>
                 <div class="flex-row align-cen price-tag">
                     <div class="price-txt mr-9">PRICE </div>
@@ -110,12 +121,17 @@ class NextroServicesCard extends HTMLElement {
 
         headerCon.addEventListener('click',(e)=>{this.headerConClickHandler(e)});
     }
+    setHeightWheneverViewChange(){
+        this.contentRef.style.height = this.contentRef.clientHeight+"px";
+    }
     connectedCallback() {  
         this.arrowRef = this.shadowRoot.querySelector("#arrow");
-        console.log(this.arrowRef);
+        this.contentRef = this.shadowRoot.querySelector("#content-holder");
+        this.setHeightWheneverViewChange();
     }
     headerConClickHandler(e){
         this.arrowRef.classList.toggle('rotate-down');
+        this.contentRef.classList.toggle('hider-con');
     }
     static get observedAttributes() {
         return ['card-title','card-data','price-data'];
