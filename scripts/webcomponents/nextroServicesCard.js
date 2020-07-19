@@ -106,7 +106,7 @@ class NextroServicesCard extends HTMLElement {
                 <div id="title" class="title-sty"></div>
                 <img id="arrow" class="icon-sty" src="/assets/icons/right-cheveron.svg">
             </div>
-            <div id="content-holder" class="content">
+            <div id="content-holder" class="content hider-con">
                 <p id="content-data" class="content-sty"></p>
                 <div class="flex-row align-cen price-tag">
                     <div class="price-txt mr-9">PRICE </div>
@@ -127,9 +127,9 @@ class NextroServicesCard extends HTMLElement {
         this.arrowRef = this.shadowRoot.querySelector("#arrow");
         this.contentRef = this.shadowRoot.querySelector("#content-holder");
         this.contentData = this.shadowRoot.querySelector("#content-data");
-        this.setHeightWheneverViewChange();
     }
     headerConClickHandler(e){
+        this.setHeightWheneverViewChange();
         this.arrowRef.classList.toggle('rotate-down');
         this.contentRef.classList.toggle('hider-con');
     }
