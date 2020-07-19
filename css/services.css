@@ -91,7 +91,9 @@
     margin:0px;
     font-weight:bold;
 }
-
+.cate-mt{
+    margin-top:30px;
+}
 /* Media quey handle */
 
 @media only screen and (max-width: 900px) {
