@@ -113,6 +113,7 @@ class NextroTitleBar extends HTMLElement {
             text-decoration:none;
             padding-top:22px;
             opacity:0;
+            z-index:-10;
             transition:opacity 0.35s;
         }
         .menu-nav-bar{
@@ -120,6 +121,7 @@ class NextroTitleBar extends HTMLElement {
         }
         .ham-show{
             opacity:1;
+            z-index:10;
         }
         button,a {
         -webkit-tap-highlight-color: rgba(0,0,0,0);
