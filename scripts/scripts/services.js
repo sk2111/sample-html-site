@@ -1,6 +1,9 @@
 const accountsSec1 = document.querySelector("#sec-1-sub-accounts");
 const taxationSec1 = document.querySelector("#sec-1-sub-taxation");
 const financeSec1 = document.querySelector("#sec-1-sub-finance");
+const viewAccount = document.querySelector("#sec-1-view-1");
+const viewTaxation = document.querySelector("#sec-1-view-2");
+const viewFinance = document.querySelector("#sec-1-view-3");
 
 class servicesHandlerClass {
     constructor(){}
