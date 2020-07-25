@@ -101,6 +101,12 @@ class NextroServicesCard extends HTMLElement {
             .content-sty{
                 line-height:23px;
             }
+            .title-sty{
+                font-size:11px;
+            }
+            .icon-sty{
+                height:20px;
+            }
         }
         </style>
         <div class="cd-mar">
