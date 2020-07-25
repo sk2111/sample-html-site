@@ -67,6 +67,19 @@ class servicesHandlerClass {
             }
         });
     }
+    mobileClick(e){
+        let name = e.getAttribute('myname');
+        this.hideAllViews();
+        if(name === 'accounts'){
+            this.removeDpNoneForView('taxation');
+        }
+        if(name === 'taxation'){
+            this.removeDpNoneForView('finance');
+        }
+        if(name === 'finance'){
+            this.removeDpNoneForView('accounts');
+        }
+    }
 }
 
 const servicesHandler = new servicesHandlerClass();
