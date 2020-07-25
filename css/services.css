@@ -100,9 +100,8 @@
     width:25px;
     background-color: #0747a6;
     border-radius: 50%;
-    text-align: center;
     color: white;
-    font-size: 17px;
+    font-size: 18px;
     display: none;
     cursor: pointer;
 }
