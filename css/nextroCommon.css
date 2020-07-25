@@ -245,6 +245,28 @@ body{
   -webkit-animation-name: bounceInRight;
   animation-name: bounceInRight;
 }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.animate__fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
 /* Resuable styles */
 .flex{
     display:flex;

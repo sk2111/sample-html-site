@@ -26,11 +26,35 @@ class servicesHandlerClass {
             });
         });
     }
+    hideAllViews(){
+        viewAccount.classList.add('dp-view-none');
+        viewTaxation.classList.add('dp-view-none');
+        viewFinance.classList.add('dp-view-none');
+    }
+    removeDpNoneForView(name)
+    {
+        if(name === 'accounts'){
+            viewAccount.classList.remove("dp-view-none");
+            viewAccount.classList.add("animate__animated","animate__fadeIn");
+        }
+        if(name === 'taxation'){
+            viewTaxation.classList.remove("dp-view-none");
+            viewTaxation.classList.add("animate__animated","animate__fadeIn");
+        }
+        if(name === 'finance'){
+            viewFinance.classList.remove("dp-view-none");
+            viewFinance.classList.add("animate__animated","animate__fadeIn");
+        }
+    }
     subTabChanged(e){
         this.clearAllHighlights();
+        this.hideAllViews();
         let childNodes = e.childNodes;
+        let name = e.getAttribute('myname');
         // add highlighted tab class
         e.classList.add("highlighted-tab");
+        // show view for respective tab
+        this.removeDpNoneForView(name);
         // color update to child nodes
         childNodes.forEach(element => {
             if(element.localName === 'img')
