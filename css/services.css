@@ -129,9 +129,15 @@
         font-size: 0.63rem;
     }
     .section-1-services{
-        padding:15px 10px 15px 0px;
+        padding:15px 10px 15px 10px;
+    }
+    .services-title-tab{
+        display: none;
     }
     .highlighted-tab{
         padding: 12px 0px;
+    }
+    .view-main-decription{
+        line-height:23px;
     }
 }

@@ -98,7 +98,9 @@ class NextroServicesCard extends HTMLElement {
         }
         /*Media queries*/
         @media only screen and (max-width: 700px) {
-          
+            .content-sty{
+                line-height:23px;
+            }
         }
         </style>
         <div class="cd-mar">
