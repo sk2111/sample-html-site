@@ -141,3 +141,9 @@
         line-height:21px;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .sec-1-category-con {
+        padding: 25px;
+    }
+}

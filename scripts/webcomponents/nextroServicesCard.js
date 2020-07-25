@@ -107,6 +107,29 @@ class NextroServicesCard extends HTMLElement {
             .icon-sty{
                 height:20px;
             }
+            .card-container {
+                padding:0px 15px;
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            .content{
+                padding:0px 13px;
+            }
+            .content-sty{
+                padding-top:0px;
+            }
+            .cd-mar{
+                margin-top:15px;
+            }
+            .price-txt{
+                font-size:12px;
+            }
+            .price-amt{
+                font-size:12px;
+            }
+            .price-tag{
+                right:10px;
+            }
         }
         </style>
         <div class="cd-mar">
