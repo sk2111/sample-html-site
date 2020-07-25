@@ -99,7 +99,7 @@ class NextroServicesCard extends HTMLElement {
         /*Media queries*/
         @media only screen and (max-width: 700px) {
             .content-sty{
-                line-height:23px;
+                line-height:21px;
             }
             .title-sty{
                 font-size:11px;
