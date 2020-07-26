@@ -109,31 +109,47 @@
 /* section 2 services */
 .section-2-services{
     background-color: white;
-    padding:0 35px 35px 0;
+    padding:25px 35px 15px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sec-2-con{
+    width:95vw;
 }
 .sec-2-title{
-    color: #333333;
+    color: #757575;
+    font-weight: bold;
+    letter-spacing: 1.5px;
     font-size: 1.8rem;
     font-weight: bold;
     text-align: center;
 }
+.sec-2-card{
+    height:200px;
+    width:270px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.pt-20{
+    padding-top: 20px;
+}
 .sec-2-icon1{
-    height:25px;
-    width:25px;
+    height:45px;
+    width:45px;
 }
 .sec-2-num{
-    color: #616161;
+    color: black;
     font-size:1.37rem;
     font-weight: bold;
-    font-style: italic;
-    margin-top: 13px;
+    margin-top: 25px;
 }
 .sec-2-txt{
     color: #616161;
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 1px;
-    margin-top: 13px;
+    margin-top: 25px;
 }
 /* Section 3 services */
 .section-3-services{
