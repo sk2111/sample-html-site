@@ -154,6 +154,7 @@
 /* Section 3 services */
 .section-3-services{
     background-color: #f2f2f2;
+    padding:25px 35px 15px 35px;
     height:100vh;
 }
 /* Media quey handle */
