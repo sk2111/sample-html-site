@@ -267,6 +267,9 @@ button:focus {
     .mp-mob{
         margin-left:20px;
     }
+    textarea{
+        width:305px;
+    }
 }
 @media only screen and (max-width: 900px) {
     .services-title-tab{
@@ -315,6 +318,11 @@ button:focus {
         display: block;
     }
 }
+@media only screen and (max-width: 600px) {
+    .sec-1-category-con {
+        padding: 25px;
+    }
+}
 @media only screen and (max-width: 570px) {
     .input-box{
         width:200px;
@@ -322,10 +330,9 @@ button:focus {
     textarea{
         width: 200px;
     }
-}
-@media only screen and (max-width: 600px) {
-    .sec-1-category-con {
-        padding: 25px;
+    .field-con{
+        margin-top: 35px;
+        justify-content: space-around;
     }
 }
 @media only screen and (max-width: 400px) {
@@ -334,6 +341,9 @@ button:focus {
         width:60px;
     }
     .ml-inp{
+        margin-left: 10px;
+    }
+    .mp-mob{
         margin-left: 10px;
     }
 }
