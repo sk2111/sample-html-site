@@ -118,15 +118,15 @@
     width:95vw;
 }
 .sec-2-title{
-    color: #757575;
+    color: #505050;
     font-weight: bold;
     letter-spacing: 1.5px;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: bold;
     text-align: center;
 }
 .sec-2-card{
-    height:200px;
+    height:175px;
     width:270px;
     margin-top:20px;
     margin-bottom:20px;
@@ -139,13 +139,13 @@
     width:45px;
 }
 .sec-2-num{
-    color: black;
+    color: gray;
     font-size:1.37rem;
     font-weight: bold;
     margin-top: 25px;
 }
 .sec-2-txt{
-    color: #616161;
+    color: #525151;
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 1px;
