@@ -315,9 +315,25 @@ button:focus {
         display: block;
     }
 }
-
+@media only screen and (max-width: 570px) {
+    .input-box{
+        width:200px;
+    }
+    textarea{
+        width: 200px;
+    }
+}
 @media only screen and (max-width: 600px) {
     .sec-1-category-con {
         padding: 25px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .input-txt-sty{
+        font-size: 13px;
+        width:60px;
+    }
+    .ml-inp{
+        margin-left: 10px;
     }
 }
