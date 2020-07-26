@@ -2,6 +2,12 @@
     font-family: 'Poppins';
     user-select: none;
 }
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 .blue-color-background{
     background-color: #0747a6;
 }
@@ -154,8 +160,7 @@
 /* Section 3 services */
 .section-3-services{
     background-color: #f2f2f2;
-    padding:25px 35px 15px 35px;
-    height:100vh;
+    padding:25px 35px 55px 35px;
 }
 .sec-3-title{
     color: #505050;
@@ -164,6 +169,95 @@
     font-size: 1.7rem;
     font-weight: bold;
     text-align: center;
+}
+.sec-3-container{
+    width:50vw;
+}
+.justify-fe{
+    display: flex;
+    justify-content: flex-end;
+}
+.sec-3-left{
+    width:530px;
+    margin-right: 50px;
+}
+.sec-3-right{
+    width:530px;
+}
+.input-txt-sty{
+    color:#616161;
+    font-size: 16px;
+    font-weight: bold;
+    width:140px;
+}
+.input-box{
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom:1px solid #616161;
+    background-color: #f2f2f2;
+    width:300px;
+    color:#0747a6;
+    font-weight: bold;
+}
+.input-box-1{
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom:1px solid #616161;
+    background-color: #f2f2f2;
+    width:50px;
+    color:#0747a6;
+    font-weight: bold;
+    padding-left:20px;
+}
+.ml-inp{
+    margin-left:20px;
+}
+.field-con{
+    margin-top:50px;
+}
+.text-area{
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    padding:15px;
+    color:#0747a6;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.post-btn{
+    background-color: #0747a6;
+    border:none;
+    border-radius:53px;
+    color:white;
+    font-size: 1rem; 
+    height:55px;
+    width:232px;
+    position: relative;
+    top:0px;
+    transition: top 0.2s;
+}
+.post-btn:hover{
+    top:-3px;
+}
+.post-btn:active{
+    top:0px;
+}
+.post-btn:focus{ 
+    outline: none; 
+}
+.r-btn-con{
+    margin-top:70px;
+}
+.input-spin-rm::-webkit-outer-spin-button,
+.input-spin-rm::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.input-spin-rm[type=number] {
+    -moz-appearance:textfield; /* Firefox */
 }
 /* Media quey handle */
 
