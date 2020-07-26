@@ -260,7 +260,14 @@ button:focus {
     -moz-appearance:textfield; /* Firefox */
 }
 /* Media quey handle */
-
+@media only screen and (max-width: 1180px) {
+    .sec-3-left{
+        margin: 0px;
+    }
+    .mp-mob{
+        margin-left:20px;
+    }
+}
 @media only screen and (max-width: 900px) {
     .services-title-tab{
         width:20%;
