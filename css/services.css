@@ -329,6 +329,7 @@ button:focus {
     }
     textarea{
         width: 200px;
+        line-height: 25px;
     }
     .field-con{
         margin-top: 35px;
@@ -336,9 +337,16 @@ button:focus {
     }
 }
 @media only screen and (max-width: 400px) {
+    .input-box{
+        width:170px;
+    }
+    textarea{
+        width: 170px;
+        line-height: 25px;
+    }
     .input-txt-sty{
         font-size: 13px;
-        width:60px;
+        width:80px;
     }
     .ml-inp{
         margin-left: 10px;
